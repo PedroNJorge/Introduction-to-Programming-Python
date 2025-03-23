@@ -1,0 +1,98 @@
+
+<!-- saved from url=(0075)https://mooshak.dcc.fc.up.pt/~ip/cgi-bin/execute/872570184000102?view+ip064 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="./base.css" type="text/css">
+</head>
+<body bgcolor="white">
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+  
+    
+    <title>[IP064] Dish Renaming</title>
+    <style>
+      .function {
+          color: black;
+          background: #ffe2e2;
+          margin: 2px;
+          padding: 2px;
+          border: 1px dashed black;
+      }
+    </style>
+  
+
+
+
+<p><small>In what concerns the continuous evaluation solving exercises grade during the semester, you should </small><b><span style="color:green">submit until 23:59 of November 30th</span></b><br>
+  <small><i>(this exercise will still be available for submission after that deadline, but without counting towards your grade)</i><br>
+    <b>[to understand the context of this problem, you should read the <a target="_blank" href="https://www.dcc.fc.up.pt/~pribeiro/aulas/ip2425/practical/class07.html">class #07 exercise sheet</a>]</b></small></p>
+
+<hr>
+
+<p style="color:red"><b>In this problem you should submit a function as described. Inside the function do not print anything that was not asked!</b></p>
+
+<h2>[IP064] Dish Renaming</h2>
+
+<p><img src="./872570184000102" align="right" width="180">
+Linda Belcher, the co-owner of Bob's Burgers, believes that a catchy name can make any dish more appealing. She wants to rename one specific item on the restaurant's menu. The menu is represented as a dictionary where the keys are the names of menu items and the values are their prices. Linda wants to replace the name of one existing item with a new, more exciting name while keeping its price unchanged.</p>
+
+<h3>The Problem</h3>
+
+<p>
+  Write a function <span class="function">rename(menu, old_name, new_name)</span> that given a dictionary <i>menu</i> with string keys representing menu items and integer values representing prices, changes the entry with <i>key=old_name</i> to <i>key=new_name</i>, that is, deletes the entret with the key <i>old_name</i> and create an entry with <i>new_name</i> and the same price. If <i>old_key</i> does not exist, the menu should remain unchanged.</p>
+
+<h3>Constraints</h3>
+
+<p>The following limits are guaranteed in all the test cases that will be given to your program:</p>
+
+<table>
+  <tbody><tr>
+    <td>1 ≤ <i>|menu|</i> ≤ 100</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>number of items on the menu</td>
+  </tr>
+</tbody></table>
+
+<br>
+
+<table cellspacing="1" cellpadding="4" bgcolor="black" border="0">
+  <tbody><tr bgcolor="#e2e2e2">
+    <td>Example Function Calls</td>
+    <td>Example Output</td>
+  </tr>
+  <tr bgcolor="white">
+    <td valign="top">
+<pre>menu = {"coffee":60, "croissant":120, "donut":100, "burger":400}
+rename(menu, "croissant", "frenchy")
+print(sorted(list(menu.items())))
+rename(menu, "donut", "roundy")
+print(sorted(list(menu.items())))
+rename(menu, "icecream", "icy")
+print(sorted(list(menu.items())))
+</pre>
+    </td>
+    <td valign="top">
+<pre>[('burger', 400), ('coffee', 60), ('donut', 100), ('frenchy', 120)]
+[('burger', 400), ('coffee', 60), ('frenchy', 120), ('roundy', 100)]
+[('burger', 400), ('coffee', 60), ('frenchy', 120), ('roundy', 100)]
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<hr size="2">
+<center><b>Introduction to Programming (CC1024)</b><br>
+  DCC/FCUP - University of Porto
+</center>
+<hr size="2">
+
+
+</td>
+</tr>
+</tbody></table>
+</center>
+
+
+</body></html>

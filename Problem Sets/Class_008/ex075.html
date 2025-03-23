@@ -1,0 +1,100 @@
+
+<!-- saved from url=(0076)https://mooshak.dcc.fc.up.pt/~ip/cgi-bin/execute/7055768355287504?view+ip075 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="./base.css" type="text/css">
+</head>
+<body bgcolor="white">
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+  
+    
+    <title>[IP075] Ancient Texts</title>
+    <style>
+      .function {
+          color: black;
+          background: #ffe2e2;
+          margin: 2px;
+          padding: 2px;
+          border: 1px dashed black;
+      }
+    </style>
+  
+
+
+
+<p><small>In what concerns the continuous evaluation solving exercises grade during the semester, you should </small><b><span style="color:green">submit until 23:59 of December 7th</span></b><br>
+  <small><i>(this exercise will still be available for submission after that deadline, but without counting towards your grade)</i><br>
+    <b>[to understand the context of this problem, you should read the <a target="_blank" href="https://www.dcc.fc.up.pt/~pribeiro/aulas/ip2425/practical/class08.html">class #08 exercise sheet</a>]</b></small></p>
+
+<hr>
+
+<p style="color:red"><b>In this problem you should submit a function as described. Inside the function do not print anything that was not asked!</b></p>
+
+<h2>[IP075] Ancient Texts</h2>
+
+<p><img src="./7055768355287504" align="right">
+Samwell Tarly, the learned scholar from the Night's Watch, is studying ancient texts written in various cases. He has a list of words and wants to analyze them to gain insights about the writing styles of different authors. Specifically, Samwell is interested in counting how many words in the list are written on lowercase, uppercase or none.
+
+</p><h3>The Problem</h3>
+
+<p>Write a function <span class="function">word_types(lst)</span> that given a list of strings <i>lst</i> returns a tuple <i>(lower,upper,other)</i> where:</p>
+<ul>
+  <li><i>lower</i> is the number of words written only in lower case (e.g., "winter", "snow").
+  </li><li><i>upper</i> is the number of words written only in upper case (e.g., "WALL", "CASTLE").
+  </li><li><i>other</i> is the number of words that contain a mix of lowercase and uppercase letters (e.g., "KingsLanding", "TheSevenKingdoms").
+</li></ul>
+
+<h3>Constraints</h3>
+
+<p>The following limits are guaranteed in all the test cases that will be given to your program:</p>
+
+<table>
+  <tbody><tr>
+    <td>1 ≤ <i>|lst|</i>  ≤ 100</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>number of words to consider</td>
+  </tr>
+</tbody></table>
+
+<p>You can also be assured that the length of each word will be at most 50 and that all words will be made only of letters (no other type of characters will appear).</p>
+
+<br>
+
+<table cellspacing="1" cellpadding="4" bgcolor="black" border="0">
+  <tbody><tr bgcolor="#e2e2e2">
+    <td>Example Function Calls</td>
+    <td>Example Output</td>
+  </tr>
+  <tr bgcolor="white">
+    <td valign="top">
+<pre>print(word_types(["Winter","IS","coming","WALL","CASTLE"]))
+print(word_types(["stark","Lannister","TaRgArYeN", "ARRYN","tully"]))
+print(word_types(["Robb", "Sansa", "Arya", "Bran", "Rickon", "Jon"]))
+</pre>
+    </td>
+    <td valign="top">
+<pre>(1, 3, 1)
+(2, 1, 2)
+(0, 0, 6)
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<hr size="2">
+<center><b>Introduction to Programming (CC1024)</b><br>
+  DCC/FCUP - University of Porto
+</center>
+<hr size="2">
+
+
+</td>
+</tr>
+</tbody></table>
+</center>
+
+
+</body></html>

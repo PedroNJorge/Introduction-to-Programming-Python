@@ -1,0 +1,195 @@
+
+<!-- saved from url=(0076)https://mooshak.dcc.fc.up.pt/~ip/cgi-bin/execute/6620676068878116?view+ip093 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="./base.css" type="text/css">
+</head>
+<body bgcolor="white">
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+  
+    
+    <title>[IP093] The Mysteries of Cellular Automata</title>
+  
+
+
+
+<p><small>In what concerns the continuous evaluation solving exercises grade during the semester, you should </small><b><span style="color:green">submit until 23:59 of December 21st</span></b><br>
+  <small><i>(this exercise will still be available for submission after that deadline, but without couting towards your grade)</i><br>
+    <b>[to understand the context of this problem, you should read the <a target="_blank" href="https://www.dcc.fc.up.pt/~pribeiro/aulas/ip2425/practical/class10.html">class #10 exercise sheet</a>]</b></small></p>
+
+<hr>
+
+<p style="color:red"><b>In this problem you should read from the standard input using functions such as input() and you should write to the standard output using functions such as print()</b></p>
+
+<p style="color:darkblue"><b>(you are expected to read the class instructions, that will help you build a solution with structured programming and incremental development)</b></p>
+
+<h2>[IP093] The Mysteries of Cellular Automata</h2>
+
+<p><font color="#777777"><i>(this problem is an adaptation from the contest that selected U. Porto students for MIUP'2024)</i></font></p>
+
+<p><img src="./6620676068878116" align="right">
+Sakura Haruno has always been curious about how simple rules can give rise to complex patterns. One day, she stumbles upon the concept of <b>cellular automata</b> and is immediately fascinated by their beauty and potential. She reads about <b>elementary cellular automata</b>, where intricate designs emerge from just a few basic rules.</p>
+
+<p>Eager to see these patterns for herself, Sakura decides to simulate them on her computer. However, despite her skills as a ninja and healer, coding the automaton is proving trickier than she expected. She reaches out for help, asking you to write a program that simulates an elementary cellular automaton for her.</p>
+
+<p>Sakura's goal is simple: <b>she wants to visualize the evolution of the automaton over multiple generations, starting from an initial state</b>. This will help her uncover the beauty and complexity hidden in the seemingly straightforward rules of cellular automata. Can you help her?</p>
+
+
+<p>An <b><a target="_blank" href="https://en.wikipedia.org/wiki/Elementary_cellular_automaton">elementary cellular automaton</a></b> is a one-dimensional array of cells, where each cell can have one of two states: 0 or 1. The state of a cell in the next generation is determined by the states of itself and its two immediate neighbors (left and right) in the current generation, using a predefined rule.</p>
+
+<p>There are 8 = 2<sup>3</sup> possible configurations for a cell and its two immediate neighbors. The rule defining the cellular automaton must specify the resulting state for each of these possibilities so there are 256 = 2<sup>8</sup> possible elementary cellular automata. The <a target="_blank" href="https://en.wikipedia.org/wiki/Wolfram_code">Wolfram code</a> assigns each rule a number from 0 to 255. Each possible current configuration is written in order, 111, 110, ..., 001, 000, and the resulting state for each of these configurations is written in the same order and interpreted as the binary representation of an integer. This number is taken to be the rule number of the automaton. For example, <b>30</b> in decimal is equal to <b>00011110</b> in binary, so <b>rule 30</b> is defined by the transition rule:</p>
+
+<table bgcolor="black" cellspacing="1">
+<tbody><tr bgcolor="#e2e2e2">
+  <td align="center"><b>current pattern (left, center, right)</b></td>
+  <td align="center">&nbsp;111&nbsp;</td>
+  <td align="center">&nbsp;110&nbsp;</td>
+  <td align="center">&nbsp;101&nbsp;</td>
+  <td align="center">&nbsp;100&nbsp;</td>
+  <td align="center">&nbsp;011&nbsp;</td>
+  <td align="center">&nbsp;010&nbsp;</td>
+  <td align="center">&nbsp;001&nbsp;</td>
+  <td align="center">&nbsp;000&nbsp;</td>
+</tr>
+<tr bgcolor="#f2f2f2">
+  <td align="center"><b>new state of center cell</b>
+  </td><td align="center">0</td>
+  <td align="center">0</td>
+  <td align="center">0</td>
+  <td align="center">1</td>
+  <td align="center">1</td>
+  <td align="center">1</td>
+  <td align="center">1</td>
+  <td align="center">0</td>
+</tr>
+</tbody></table>
+
+<p>It is assumed that the leftmost and the rightmost cells are also adjacent to other unused cells, which are always in state 0. This assumption ensures the automaton rule can be applied in the same way to all cells in the row. The unused cells do not appear in any input or output.</p>
+
+<p>Imagine for instance that we are applying rule 30 to an initial generation that consists of the following (where '.' represents 0 and '#' represents 1):</p>
+
+<pre>..#..</pre>
+
+<p>Then the next state would be:</p>
+
+<pre>.###.</pre>
+
+<p>This comes from applying the rule to all cell positions (C) having into acoount its left (L) and right (R) neighbors: <span style="background-color:ffcccc">L<span><span style="background-color:ccffcc">C</span><span style="background-color:ffcccc">R</span>
+
+  </span></span></p><ul>
+    <li><tt><span style="background-color:#ccffcc">.</span><span style="background-color:ffcccc">.</span>#..</tt> → <tt><b>'.'</b></tt> (current pattern is 000, we apply rule 30,  giving origin to 0)
+    </li><li><tt><span style="background-color:ffcccc">.</span><span style="background-color:#ccffcc">.</span><span style="background-color:ffcccc">#</span>..</tt> → <tt><b>'#'</b></tt> (current pattern is 001, we apply rule 30,  giving origin to 1)
+    </li><li><tt>.<span style="background-color:ffcccc">.</span><span style="background-color:#ccffcc">#</span><span style="background-color:ffcccc">.</span>.</tt> → <tt><b>'#'</b></tt> (current pattern is 010, we apply rule 30,  giving origin to 1)
+    </li><li><tt>..<span style="background-color:ffcccc">X</span><span style="background-color:#ccffcc">.</span><span style="background-color:ffcccc">.</span></tt> → <tt><b>'#'</b></tt> (current pattern is 100, we apply rule 30,  giving origin to 1)
+    </li><li><tt>..#<span style="background-color:ffcccc">.</span><span style="background-color:#ccffcc">.</span></tt> → <tt><b>'.'</b></tt> (current pattern is 000, we apply rule 30,  giving origin to 0)
+  </li></ul>
+
+<h3>The Problem</h3>
+
+<p>Write a program that, given an integer <i>R</i> indicating the rule of the elementary cellular automaton, a number <i>K</i> indicating the number of generations to compute, and a string <i>S</i> indicating the initial state, generates the following <i>K</i> generations as previously described.</p>
+
+<h3>Input</h3>
+
+<p>The first line of input contains integers separated by a single space: <i>R</i> (the decimal representing the rule) and <i>K</i> (the number of generations)</p>
+
+<p>The second line contains the G, the initial generation, coded as a string of characters, with '.' coding 0 and '#' coding 1. This initial generation will be a single string without spaces.</p>
+
+<h3>Output</h3>
+
+<p>The output should consist of <i>K</i> lines, containing the following K generations produced by the given automaton. The generations are coded and formatted in the same way as the first generation in the input.</p>
+
+
+<h3>Constraints</h3>
+
+<p>The following limits are guaranteed in all the test cases that will be given to your program:</p>
+
+<table>
+  <tbody><tr>
+    <td>0 ≤ <i>R</i> ≤ 255</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>autotomaton rule</td>
+  </tr>
+  <tr>
+    <td>1 ≤ <i>K</i> ≤ 200</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>number of generations</td>
+  </tr>
+  <tr>
+    <td>1 ≤ <i>|G|</i> ≤ 250</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>length of first generation</td>
+  </tr>
+</tbody></table>
+
+<br>
+
+<table cellspacing="1" cellpadding="4" bgcolor="black" border="0"> 
+  <tbody><tr bgcolor="#e2e2e2">
+    <td>Example Input 1</td>
+    <td>Example Output 1</td>
+  </tr>
+  <tr bgcolor="white">
+    <td valign="top">
+<pre>128 5
+#############
+</pre>
+    </td>
+    <td valign="top">
+<pre>.###########.
+..#########..
+...#######...
+....#####....
+.....###.....
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<br>
+
+<table cellspacing="1" cellpadding="4" bgcolor="black" border="0">
+  <tbody><tr bgcolor="#e2e2e2">
+    <td>Example Input 2</td>
+    <td>Example Output 2</td>
+  </tr>
+  <tr bgcolor="white">
+    <td valign="top">
+<pre>30 10
+...........#...........
+</pre>
+    </td>
+    <td valign="top">
+<pre>..........###..........
+.........##..#.........
+........##.####........
+.......##..#...#.......
+......##.####.###......
+.....##..#....#..#.....
+....##.####..######....
+...##..#...###.....#...
+..##.####.##..#...###..
+.##..#....#.####.##..#.
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<br>
+
+<hr size="2">
+<center><b>Introduction to Programming (CC1024)</b><br>
+  DCC/FCUP - University of Porto
+</center>
+<hr size="2">
+
+
+</td>
+</tr>
+</tbody></table>
+</center>
+
+
+</body></html>

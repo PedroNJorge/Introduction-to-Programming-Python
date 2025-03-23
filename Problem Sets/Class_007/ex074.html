@@ -1,0 +1,116 @@
+
+<!-- saved from url=(0075)https://mooshak.dcc.fc.up.pt/~ip/cgi-bin/execute/872570184000102?view+ip074 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="./base.css" type="text/css">
+</head>
+<body bgcolor="white">
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+  
+    
+    <title>[IP074] Saving Coins</title>
+    <style>
+      .function {
+          color: black;
+          background: #ffe2e2;
+          margin: 2px;
+          padding: 2px;
+          border: 1px dashed black;
+      }
+    </style>
+  
+
+
+
+<p><small>In what concerns the continuous evaluation solving exercises grade during the semester, you should </small><b><span style="color:green">submit until 23:59 of November 30th</span></b><br>
+  <small><i>(this exercise will still be available for submission after that deadline, but without counting towards your grade)</i><br>
+    <b>[to understand the context of this problem, you should read the <a target="_blank" href="https://www.dcc.fc.up.pt/~pribeiro/aulas/ip2425/practical/class07.html">class #07 exercise sheet</a>]</b></small></p>
+
+<hr>
+
+<p style="color:red"><b>In this problem you should submit a function as described. Inside the function do not print anything that was not asked!</b></p>
+
+<h2>[IP074] Saving Coins</h2>
+
+<p><img src="./872570184000102" align="right" width="130">
+Peter Pescadero, a frugal kid who loves saving money, is trying to pay an exact amount using the least number of coins possible. Given a set of coin denominations and a target amount, Peter wants to find the minimum number of coins needed to make that exact amount. Can you help him?</p>
+<p></p>
+
+<h3>The Problem</h3>
+
+<p>
+  Write a function <span class="function">minimum_coins(coins, k)</span> that given <i>coins</i>, an integer set of coin denominations and <i>k</i>, a positive amount, returns the minimum amount of coins that you need to use to make quantity <i>k</i>. In case the quantity is not achievable with the coins you have, return -1. You may assume you have an infinite supply of all coins.</p>
+
+
+<h3>Constraints</h3>
+
+<p>The following limits are guaranteed in all the test cases that will be given to your program:</p>
+
+<table>
+  <tbody><tr>
+    <td>1 ≤ <i>|coins|</i> ≤ 50</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>number of coin denominations</td>
+  </tr>
+  <tr>
+    <td>1 ≤ <i>k</i> ≤ 10&nbsp;000</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>quantity to consider</td>
+  </tr>
+</tbody></table>
+
+
+<p style="color:red">NOTE: an inneficient solution will most likely have <b>Time Limit Exceeded</b>.<br>
+This is a challenge exercise and is substantially harder than the other and might need algorithmic topics we have not yet spoken on the class.</p>
+
+<br>
+
+<table cellspacing="1" cellpadding="4" bgcolor="black" border="0">
+  <tbody><tr bgcolor="#e2e2e2">
+    <td>Example Function Calls</td>
+    <td>Example Output</td>
+  </tr>
+  <tr bgcolor="white">
+    <td valign="top">
+<pre>print(minimum_coins({1,5,7}, 11))
+print(minimum_coins({1,5,10}, 10))
+print(minimum_coins({3,6}, 10))
+print(minimum_coins({1}, 42))
+</pre>
+    </td>
+    <td valign="top">
+<pre>3
+1
+-1
+42
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<p>Explanation of sample input:</p>
+
+<ul>
+  <li>The minimum number of {1,5,7} coins to make 11 is 3 coins: 5+5+1
+  </li><li>The minimum number of {1,5,10} coins to make 10 is 1 coins: 10
+  </li><li>There is no way to make 10 using only coins 3 and 6
+  </li><li>The minimum number of {1} coins to make 42 is 42 coins: 42 coins of 1
+</li></ul>
+
+<hr size="2">
+<center><b>Introduction to Programming (CC1024)</b><br>
+  DCC/FCUP - University of Porto
+</center>
+<hr size="2">
+
+
+</td>
+</tr>
+</tbody></table>
+</center>
+
+
+</body></html>

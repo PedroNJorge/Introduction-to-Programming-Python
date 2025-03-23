@@ -1,0 +1,118 @@
+
+<!-- saved from url=(0077)https://mooshak.dcc.fc.up.pt/~ip/cgi-bin/execute/31144846710909554?view+ip097 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="./base.css" type="text/css">
+</head>
+<body bgcolor="white">
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+  
+    
+    <title>[IP097] Neo's Error Awakening</title>
+    <style>
+      .function {
+          color: black;
+          background: #ffe2e2;
+          margin: 2px;
+          padding: 2px;
+          border: 1px dashed black;
+      }
+    </style>
+  
+
+
+
+<p><small>In what concerns the continuous evaluation solving exercises grade during the semester, you should </small><b><span style="color:green">submit until 23:59 of January 4th</span></b><br>
+  <small><i>(this exercise will still be available for submission after that deadline, but without counting towards your grade)</i><br>
+    <b>[to understand the context of this problem, you should read the <a target="_blank" href="https://www.dcc.fc.up.pt/~pribeiro/aulas/ip2425/practical/class11.html">class #11 exercise sheet</a>]</b></small></p>
+
+<hr>
+
+<p style="color:red"><b>In this problem you should submit a function as described. Inside the function do not print anything that was not asked!</b></p>
+
+<h2>[IP097] Neo's Error Awakening</h2>
+
+<p><img src="./31144846710909554" align="right" width="300">
+Neo has just begun his training aboard the Nebuchadnezzar. Morpheus sits across from him, a faint smile on his face.
+<br> 
+<br>
+"Neo," he begins, "you've taken the red pill and awakened to the truth, but the Matrix is not 
+just a world of code—it's a world of errors."
+<br>
+<br>
+"Errors?" Neo asks.
+<br> 
+<br>
+"Yes," Morpheus replies. "Errors are glitches in the system. Unchecked, they can crash 
+your programs — or, in the Matrix, your mind."
+</p>
+
+<h3>The Problem</h3>
+
+<p>
+  Write a function <span class="function">division(a,b)</span> that,
+  that given two numbers <i>a</i> and <i>b</i> returns the string <code>"a/b = (a/b)"</code> (note that you don't need to round: just return the result of <code>a/b</code> as a string in the respective position).</p>
+
+<p>When <i>b</i> is zero, the function catches the respective exception and returns the string 
+  <code>"Error: Division by 0!"</code>. Additonally, if an argument is not a number in the function call, the function should also catch the equivalent error and returns the string <code>"Error: Unsupported type(s) for division!"</code>".
+</p>
+
+<h3>Constraints</h3>
+
+<p>The following limits are guaranteed in all the test cases that will be given to your program:</p>
+
+<table>
+  <tbody><tr>
+    <td>-1000 ≤ <i>a</i>, <i>b</i> ≤ 1000</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>Numbers <i>a</i> and <i>b</i> </td>
+  </tr>
+  <tr>
+     <td><i>a</i> and <i>b</i> can be given as strings</td>
+     <td>&nbsp; &nbsp; &nbsp;</td>
+      <td>This scenario will also raise an exception</td>
+  </tr>
+</tbody></table>
+
+<br>
+
+<table cellspacing="1" cellpadding="4" bgcolor="black" border="0">
+  <tbody><tr bgcolor="#e2e2e2">
+    <td>Example Function Calls</td>
+    <td>Example Output</td>
+  </tr>
+  <tr bgcolor="white">
+    <td valign="top">
+<pre>print(division(10, 2))
+print(division("10", 2))
+print(division(10, 0))
+print(division(10, "b"))
+</pre>
+    </td>
+    <td valign="top">
+<pre>10/2 = 5.0
+Error: Unsupported type(s) for division!
+Error: Division by 0!
+Error: Unsupported type(s) for division!
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<hr size="2">
+<center><b>Introduction to Programming (CC1024)</b><br>
+  DCC/FCUP - University of Porto
+</center>
+<hr size="2">
+
+
+</td>
+</tr>
+</tbody></table>
+</center>
+
+
+</body></html>

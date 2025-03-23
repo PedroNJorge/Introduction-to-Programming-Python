@@ -1,0 +1,144 @@
+
+<!-- saved from url=(0076)https://mooshak.dcc.fc.up.pt/~ip/cgi-bin/execute/7055768355287504?view+ip083 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="./base.css" type="text/css">
+</head>
+<body bgcolor="white">
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+  
+    
+    <title>[IP083] Three-Eyed Raven</title>
+    <style>
+      .function {
+          color: black;
+          background: #ffe2e2;
+          margin: 2px;
+          padding: 2px;
+          border: 1px dashed black;
+      }
+    </style>
+  
+
+
+
+<p><small>In what concerns the continuous evaluation solving exercises grade during the semester, you should </small><b><span style="color:green">submit until 23:59 of December 7th</span></b><br>
+  <small><i>(this exercise will still be available for submission after that deadline, but without counting towards your grade)</i><br>
+    <b>[to understand the context of this problem, you should read the <a target="_blank" href="https://www.dcc.fc.up.pt/~pribeiro/aulas/ip2425/practical/class08.html">class #08 exercise sheet</a>]</b></small></p>
+
+<hr>
+
+<p style="color:red"><b>In this problem you should submit a function as described. Inside the function do not print anything that was not asked!</b></p>
+
+<h2>[IP083] Three-Eyed Raven</h2>
+
+<p><img src="./7055768355287504" align="right">
+  Bran Stark, with his newfound abilities as the Three-Eyed Raven, needs to send a secure message to allies across the realm. To keep the message hidden from enemies, Bran decides to use the <a href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher">Vigenère cipher</a>, a method of encrypting alphabetic text by using a keyword to shift letters in a repeating pattern. The Vigenère cipher is more secure than the simple Caesar cipher because it uses a series of shifts determined by the keyword.</p>
+
+<p>Imagine for instance that text to cipher is "attackatdawn" and the keyword is "fog". Then:</p>
+
+<ul>
+  <li>The first letter 'a' of the text is shifted 5 positions to the right because the first letter 'f' of the keyword is the 5th letter of the alphabet (counting from zero).
+  </li><li>The second letter 't' of the text is shifted 14 positions to the right because the second letter 'o' of the keyword is the 14th letter of the alphabet (counting from zero).
+  </li><li>The third letter 't' of the text is shifted 6 positions to the right because the third letter 'g' of the keyword is the 6th letter of the alphabet (counting from zero).
+  </li><li>The fourth letter 'a' of the text is shifted 5 positions to the right because the fourth letter 'f' of the keyword is the 5th letter of the alphabet (counting from zero). Note how the fourth letter wraps around the keyword, returning to the first letter.
+  </li><li>(...)
+</li></ul>
+
+  
+<h3>The Problem</h3>
+
+<p>Write two functions:
+
+  </p><ul>
+    <li><span class="function">vigenere_encrypt(text, keyword):</span> that given two strings <i>text</i> and <i>keyword</i> returns a string that is the result of applying the Vigenère cipher to <i>text</i> using as key the <i>keyword</i>.<br>&nbsp;
+
+    </li><li><span class="function">vigenere_decrypt(text, keyword):</span> that given two strings <i>text</i> and <i>keyword</i> returns a string that is the result of applying the reverse of the Vigenère cipher to <i>text</i> using as key the <i>keyword</i>.<br>&nbsp;
+  </li></ul>
+
+  <p>In both methods the keyword will always be a string made only of lowercase letters. As to what regards the text, it can have any type of character, but you should only shift the letter characteres. Note that the case of the letter (upper or lower case) should be kept in the encrypted/decrypted text and that the <i>i</i>-th letter of the text should always be shifted using the alphabet position of the <i>i</i>-th letter of the keyword.</p>
+      
+<h3>Constraints</h3>
+
+<p>The following limits are guaranteed in all the test cases that will be given to your program:</p>
+
+<table>
+  <tbody><tr>
+    <td>1 ≤ <i>|text|</i>  ≤ 200</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>length of the text</td>
+  </tr>
+  <tr>
+    <td>1 ≤ <i>|keyword|</i>  ≤ 20</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>length of the keyword</td>
+  </tr>
+
+</tbody></table>
+
+<br>
+
+<table cellspacing="1" cellpadding="4" bgcolor="black" border="0">
+  <tbody><tr bgcolor="#e2e2e2">
+    <td>Example vigenere_encrypt() Function Calls</td>
+    <td>Example Output</td>
+  </tr>
+  <tr bgcolor="white">
+    <td valign="top">
+<pre>print(vigenere_encrypt("attackatdawn", "fog"))
+print(vigenere_encrypt("Attacking tonight?", "lemon"))
+print(vigenere_encrypt("Winter is Coming!", "stark"))
+</pre>
+    </td>
+    <td valign="top">
+<pre>fhzfqqfhjfkt
+Lxfopvmzu eszwtsx?
+Obnkoj ij Uhmzxy!
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+
+<br>
+
+<table cellspacing="1" cellpadding="4" bgcolor="black" border="0">
+  <tbody><tr bgcolor="#e2e2e2">
+    <td>Example vigenere_decrypt() Function Calls</td>
+    <td>Example Output</td>
+  </tr>
+  <tr bgcolor="white">
+    <td valign="top">
+<pre>print(vigenere_decrypt("Obnkoj ij Uhmzxy!", "stark"))
+print(vigenere_decrypt("Opizf vg ais Efhhcu", "hbo"))
+print(vigenere_decrypt("EpsDfqqxMzcjyNckUcacdWjrcBvrWinlOwu", "lion"))
+</pre>
+    </td>
+    <td valign="top">
+<pre>Winter is Coming!
+House of the Dragon
+TheQuickBrownFoxJumpsOverTheLazyDog
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<br>
+
+<hr size="2">
+<center><b>Introduction to Programming (CC1024)</b><br>
+  DCC/FCUP - University of Porto
+</center>
+<hr size="2">
+
+
+</td>
+</tr>
+</tbody></table>
+</center>
+
+
+</body></html>

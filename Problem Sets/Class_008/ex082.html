@@ -1,0 +1,129 @@
+
+<!-- saved from url=(0076)https://mooshak.dcc.fc.up.pt/~ip/cgi-bin/execute/7055768355287504?view+ip082 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="./base.css" type="text/css">
+</head>
+<body bgcolor="white">
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+  
+    
+    <title>[IP082] Night's Watch</title>
+    <style>
+      .function {
+          color: black;
+          background: #ffe2e2;
+          margin: 2px;
+          padding: 2px;
+          border: 1px dashed black;
+      }
+    </style>
+  
+
+
+
+<p><small>In what concerns the continuous evaluation solving exercises grade during the semester, you should </small><b><span style="color:green">submit until 23:59 of December 7th</span></b><br>
+  <small><i>(this exercise will still be available for submission after that deadline, but without counting towards your grade)</i><br>
+    <b>[to understand the context of this problem, you should read the <a target="_blank" href="https://www.dcc.fc.up.pt/~pribeiro/aulas/ip2425/practical/class08.html">class #08 exercise sheet</a>]</b></small></p>
+
+<hr>
+
+<p style="color:red"><b>In this problem you should submit a function as described. Inside the function do not print anything that was not asked!</b></p>
+
+<h2>[IP082] Night's Watch</h2>
+
+<p><img src="./7055768355287504" align="right">
+  Jon Snow, the Lord Commander of the Night's Watch, needs to present important information about the supplies and status of the Watch to his fellow brothers. To make it clear and organized, Jon wants to transform a list of strings into a formatted table with <b>K</b> columns, which he can easily display during their meetings at Castle Black.</p>
+
+<p>John always wants the values to be right aligned on the table. The table should have <b>K</b> columns, each one of them with a width equal to the maximum length of a string in the input list. Each table cell should have a order with "+" n the corners, "|" by the sides and "-" on the bottom and upper parts. Any extra cells needed in the bottom row of the table should be left empty.</p>
+
+<p>For instance, if <i>K=4</i> and the list is ["Robb", "Sansa", "Arya", "Bran", "Rickon", "Jon"]), than the table should be (check the example function calls for more examples):</p>
+
+<pre>+------+------+------+------+
+|  Robb| Sansa|  Arya|  Bran|
++------+------+------+------+
+|Rickon|   Jon|      |      |
++------+------+------+------+
+
+</pre>
+
+
+  
+<h3>The Problem</h3>
+
+<p>Write a function <span class="function">show_table(k, lst):</span> that given an integer <i>K</i> and a list of strings <i>lst</i>, prints a neatly formatted table with <b>K</b> columns as described above.</p>
+
+<h3>Constraints</h3>
+
+<p>The following limits are guaranteed in all the test cases that will be given to your program:</p>
+
+<table>
+  <tbody><tr>
+    <td>1 ≤ <i>|list|</i>  ≤ 100</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>number of strings in the initial list</td>
+  </tr>
+  <tr>
+    <td>1 ≤ <i>k</i>  ≤ 20</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>number of columns in the table</td>
+  </tr>
+
+</tbody></table>
+
+<br>
+
+<table cellspacing="1" cellpadding="4" bgcolor="black" border="0">
+  <tbody><tr bgcolor="#e2e2e2">
+    <td>Example Function Calls</td>
+    <td>Example Output</td>
+  </tr>
+  <tr bgcolor="white">
+    <td valign="top">
+<pre>show_table(4, ["Robb", "Sansa", "Arya", "Bran", "Rickon", "Jon"])
+show_table(2, ["Braavos","Dothraki","Lys","Pentos","Lhazar","Qarth","KingsLanding", "Dragonstone"])
+show_table(3, ["Tyrion","Cersei","Jaime","Tiwin"])
+</pre>
+    </td>
+    <td valign="top">
+<pre>+------+------+------+------+
+|  Robb| Sansa|  Arya|  Bran|
++------+------+------+------+
+|Rickon|   Jon|      |      |
++------+------+------+------+
++------------+------------+
+|     Braavos|    Dothraki|
++------------+------------+
+|         Lys|      Pentos|
++------------+------------+
+|      Lhazar|       Qarth|
++------------+------------+
+|KingsLanding| Dragonstone|
++------------+------------+
++------+------+------+
+|Tyrion|Cersei| Jaime|
++------+------+------+
+| Tiwin|      |      |
++------+------+------+
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<hr size="2">
+<center><b>Introduction to Programming (CC1024)</b><br>
+  DCC/FCUP - University of Porto
+</center>
+<hr size="2">
+
+
+</td>
+</tr>
+</tbody></table>
+</center>
+
+
+</body></html>

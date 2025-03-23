@@ -1,0 +1,94 @@
+
+<!-- saved from url=(0075)https://mooshak.dcc.fc.up.pt/~ip/cgi-bin/execute/872570184000102?view+ip072 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="./base.css" type="text/css">
+</head>
+<body bgcolor="white">
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+  
+    
+    <title>[IP072] Super Reversed Menu</title>
+    <style>
+      .function {
+          color: black;
+          background: #ffe2e2;
+          margin: 2px;
+          padding: 2px;
+          border: 1px dashed black;
+      }
+    </style>
+  
+
+
+
+<p><small>In what concerns the continuous evaluation solving exercises grade during the semester, you should </small><b><span style="color:green">submit until 23:59 of November 30th</span></b><br>
+  <small><i>(this exercise will still be available for submission after that deadline, but without counting towards your grade)</i><br>
+    <b>[to understand the context of this problem, you should read the <a target="_blank" href="https://www.dcc.fc.up.pt/~pribeiro/aulas/ip2425/practical/class07.html">class #07 exercise sheet</a>]</b></small></p>
+
+<hr>
+
+<p style="color:red"><b>In this problem you should submit a function as described. Inside the function do not print anything that was not asked!</b></p>
+
+<h2>[IP072] Super Reversed Menu</h2>
+
+<p><img src="./872570184000102" align="right" width="100">
+Like Jimmy Pesto Jr, aunt Gayle Genarro, Bob's sister-in-law, wants to analyze the menu in a new way. Instead of looking up items by their names, she wants to know which menu items share the same price. She has the menu in dictionary where the keys are menu items and the values are their prices. Gayle wants to reverse this dictionary so that the prices are the keys, and the values are sets containing the names of the items that have that price.</p>
+
+<h3>The Problem</h3>
+
+<p>
+  Write a function <span class="function">super_swap(menu)</span> that given a dictionary <i>menu</i> with string keys representing menu items and integer values representing prices, returns a new reverse dictionary where the new keys are the values and their new values are sets of the keys that had that value.</p>
+
+
+<h3>Constraints</h3>
+
+<p>The following limits are guaranteed in all the test cases that will be given to your program:</p>
+
+<table>
+  <tbody><tr>
+    <td>1 ≤ <i>|ingredients|</i> ≤ 100</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>number of items in the menu</td>
+  </tr>
+</tbody></table>
+
+<br>
+
+<table cellspacing="1" cellpadding="4" bgcolor="black" border="0">
+  <tbody><tr bgcolor="#e2e2e2">
+    <td>Example Function Calls</td>
+    <td>Example Output</td>
+  </tr>
+  <tr bgcolor="white">
+    <td valign="top">
+<pre>menu = {"donut":100, "burger":400, "soda":150, "pizza":400, "juice":150}
+new_menu = super_swap(menu)
+convert = [(k, type(v), sorted(list(v))) for (k,v) in new_menu.items()]
+print(sorted(convert))
+</pre>
+    </td>
+    <td valign="top">
+<pre>[(100, &lt;class 'set'&gt;, ['donut']), (150, &lt;class 'set'&gt;, ['juice', 'soda']), (400, &lt;class 'set'&gt;, ['burger', 'pizza'])]
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<hr size="2">
+<center><b>Introduction to Programming (CC1024)</b><br>
+  DCC/FCUP - University of Porto
+</center>
+<hr size="2">
+
+
+</td>
+</tr>
+</tbody></table>
+</center>
+
+
+</body></html>

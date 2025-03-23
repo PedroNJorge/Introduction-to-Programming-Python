@@ -1,0 +1,151 @@
+
+<!-- saved from url=(0076)https://mooshak.dcc.fc.up.pt/~ip/cgi-bin/execute/8614907669189809?view+ip092 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="./base.css" type="text/css">
+</head>
+<body bgcolor="white">
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+  
+    
+    <title>[IP092] Chess Puzzle</title>
+    <style>
+      .function {
+          color: black;
+          background: #ffe2e2;
+          margin: 2px;
+          padding: 2px;
+          border: 1px dashed black;
+      }
+    </style>
+  
+
+
+
+<p><small>In what concerns the continuous evaluation solving exercises grade during the semester, you should </small><b><span style="color:green">submit until 23:59 of December 14th</span></b><br>
+  <small><i>(this exercise will still be available for submission after that deadline, but without counting towards your grade)</i><br>
+    <b>[to understand the context of this problem, you should read the <a target="_blank" href="https://www.dcc.fc.up.pt/~pribeiro/aulas/ip2425/practical/class09.html">class #09 exercise sheet</a>]</b></small></p>
+
+<hr>
+
+<p style="color:red"><b>In this problem you should submit a function as described. Inside the function do not print anything that was not asked!</b></p>
+
+<p style="color:darkblue"><b>(in this class you are expected to write a solution that uses recursion - mooshak will not force it, but that should be your goal)</b></p>
+
+<h2>[IP092] Chess Puzzle</h2>
+
+<p><img src="./8614907669189809" align="right">
+Dr. Zoidberg has been given an intriguing puzzle to solve. He's been tasked with placing exactly <i>C</i> queens on a chessboard with <i>R</i> rows and <i>C</i> columns. He needs to know all the possible ways to place these queens on the board, such that no two queens can attack each other.</p>
+
+<p>As a reminder, queens in chess can move any number of squares vertically, horizontally, or diagonally. Therefore, Zoidberg must ensure that no two queens are placed in the same row, the same column, or the same diagonal.</p>
+
+<p>Zoidberg needs your help to determine all the valid arrangements of placing the queens on the chessboard.</p>
+
+  
+<h3>The Problem</h3>
+
+<p>Write a function <span class="function">queens(rows, cols)</span> that generates all possible valid arragements of <i>cols</i> queens on a chess board of <i>rows</i> by <i>columns</i> such no queen can attack each other. The function should return a list of all arragenments. Each arragement should be given as a list of integers indicating the rows of queen, with the position in the list indicating the column. Rows start at 1.</p>
+
+<p>For instance, the following valid arragement on a 8 by 8 board would be represented by [1,7,4,6,8,2,5,3].</p>
+
+<p><img src="./8614907669189809(1)"></p>
+
+<h3>Constraints</h3>
+
+<p>The following limits are guaranteed in all the test cases that will be given to your program:</p>
+
+<table>
+  <tbody><tr>
+    <td>1 ≤ <i>cols</i> ≤ rows  ≤ 10</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>number of rows and columns</td>
+  </tr>
+</tbody></table>
+
+<br>
+
+<table cellspacing="1" cellpadding="4" bgcolor="black" border="0">
+  <tbody><tr bgcolor="#e2e2e2">
+    <td>Example Function Calls</td>
+    <td>Example Output</td>
+  </tr>
+  <tr bgcolor="white">
+    <td valign="top">
+<pre>output = queens(4, 4)
+print(sorted(output))
+
+print()
+
+output = queens(6, 5)
+print("output is of type", type(output))
+print("output has size:", len(output))
+for x in sorted(output): print(x)
+</pre>
+    </td>
+    <td valign="top">
+<pre>[[2, 4, 1, 3], [3, 1, 4, 2]]
+
+output is of type <class 'list'="">
+output has size: 40
+[1, 3, 5, 2, 4]
+[1, 4, 2, 5, 3]
+[1, 5, 2, 6, 3]
+[2, 4, 1, 3, 5]
+[2, 4, 6, 1, 3]
+[2, 4, 6, 1, 5]
+[2, 4, 6, 3, 5]
+[2, 5, 1, 6, 4]
+[2, 5, 3, 1, 4]
+[2, 5, 3, 6, 4]
+[2, 6, 1, 3, 5]
+[2, 6, 3, 1, 4]
+[3, 1, 4, 2, 5]
+[3, 1, 6, 2, 5]
+[3, 1, 6, 4, 2]
+[3, 5, 2, 4, 1]
+[3, 5, 2, 4, 6]
+[3, 6, 2, 5, 1]
+[3, 6, 4, 1, 5]
+[3, 6, 4, 2, 5]
+[4, 1, 3, 5, 2]
+[4, 1, 3, 6, 2]
+[4, 1, 5, 2, 6]
+[4, 2, 5, 3, 1]
+[4, 2, 5, 3, 6]
+[4, 6, 1, 3, 5]
+[4, 6, 1, 5, 2]
+[4, 6, 3, 5, 2]
+[5, 1, 4, 6, 3]
+[5, 1, 6, 4, 2]
+[5, 2, 4, 1, 3]
+[5, 2, 4, 6, 3]
+[5, 2, 6, 1, 3]
+[5, 3, 1, 4, 2]
+[5, 3, 1, 6, 2]
+[5, 3, 1, 6, 4]
+[5, 3, 6, 4, 2]
+[6, 2, 5, 1, 4]
+[6, 3, 5, 2, 4]
+[6, 4, 2, 5, 3]
+</class></pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<hr size="2">
+<center><b>Introduction to Programming (CC1024)</b><br>
+  DCC/FCUP - University of Porto
+</center>
+<hr size="2">
+
+
+</td>
+</tr>
+</tbody></table>
+</center>
+
+
+</body></html>

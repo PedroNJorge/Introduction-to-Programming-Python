@@ -1,0 +1,123 @@
+
+<!-- saved from url=(0076)https://mooshak.dcc.fc.up.pt/~ip/cgi-bin/execute/7055768355287504?view+ip084 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="./base.css" type="text/css">
+</head>
+<body bgcolor="white">
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+  
+    
+    <title>[IP084] Three-Eyed Raven</title>
+    <style>
+      .function {
+          color: black;
+          background: #ffe2e2;
+          margin: 2px;
+          padding: 2px;
+          border: 1px dashed black;
+      }
+    </style>
+  
+
+
+
+<p><small>In what concerns the continuous evaluation solving exercises grade during the semester, you should </small><b><span style="color:green">submit until 23:59 of December 7th</span></b><br>
+  <small><i>(this exercise will still be available for submission after that deadline, but without counting towards your grade)</i><br>
+    <b>[to understand the context of this problem, you should read the <a target="_blank" href="https://www.dcc.fc.up.pt/~pribeiro/aulas/ip2425/practical/class08.html">class #08 exercise sheet</a>]</b></small></p>
+
+<hr>
+
+<p style="color:red"><b>In this problem you should submit a function as described. Inside the function do not print anything that was not asked!</b></p>
+
+<h2>[IP084] Dracarys!
+</h2>
+
+<p><img src="./7055768355287504" align="right">
+  Daenerys Targaryen, the Mother of Dragons, has tasked you with a perilous challenge. She wants to know how many occurrences of the letter 'A' appear between two given positions of the <a target="_blank" href="https://www.dcc.fc.up.pt/~pribeiro/aulas/ip2425/problems/ip046.html">White Rabbit</a> game. She will only spare you from the wrath of her dragons if you can solve this puzzle efficiently. Failure to do so will result in her commanding Drogon to unleash <b>Dracarys</b> upon you.</p>
+
+Recall the rules of the game. You start with an 'A' and then:<p></p>
+
+<ul>
+  <li>Any 'A' becomes 'AB'
+  </li><li>Any 'B' becomes 'A'
+</li></ul>
+
+<p>The first lines of the game are:</p>
+
+<pre>A
+AB
+ABA
+ABAAB
+ABAABABA
+ABAABABAABAAB
+ABAABABAABAABABAABABA
+</pre>
+
+<h3>The Problem</h3>
+
+<p>Write a function <span class="function">count_range(a,b)</span> that given two integers <i>a</i> and <i>b</i>, returns the number of 'A's that appear between positions <i>[a,b]</i> (inclusive) on the word game.</p>
+
+<p>For instance, count_range(3,10) should return 5:</p>
+
+<p>AB<b><span style="background-color: #DDFFDD">A</span><span style="background-color: #DDFFDD">A</span><span style="background-color: #FFDDDD">B</span><span style="background-color: #DDFFDD">A</span><span style="background-color: #FFDDDD">B</span><span style="background-color: #DDFFDD">A</span><span style="background-color: #DDFFDD">A</span><span style="background-color: #FFDDDD">B</span></b>AABABAABABA</p>
+
+<p>And count_range(2,19) should return 11:</p>
+
+<p>A<b><span style="background-color: #FFDDDD">B</span><span style="background-color: #DDFFDD">A</span><span style="background-color: #DDFFDD">A</span><span style="background-color: #FFDDDD">B</span><span style="background-color: #DDFFDD">A</span><span style="background-color: #FFDDDD">B</span><span style="background-color: #DDFFDD">A</span><span style="background-color: #DDFFDD">A</span><span style="background-color: #FFDDDD">B</span><span style="background-color: #DDFFDD">A</span><span style="background-color: #DDFFDD">A</span><span style="background-color: #FFDDDD">B</span><span style="background-color: #DDFFDD">A</span><span style="background-color: #FFDDDD">B</span><span style="background-color: #DDFFDD">A</span><span style="background-color: #DDFFDD">A</span><span style="background-color: #FFDDDD">B</span><span style="background-color: #DDFFDD">A</span></b>BA</p>
+
+<h3>Constraints</h3>
+
+<p>The following limits are guaranteed in all the test cases that will be given to your program:</p>
+
+<table>
+  <tbody><tr>
+    <td>1 ≤ a ≤ b ≤ 10<sup>30</sup></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>positions of the range</td>
+  </tr>
+</tbody></table>
+
+<p style="color:red">NOTE: the limits are really high and you must have an <b>efficient</b> solution that can compute this very quickly.<br>
+ Your program will need to be able to answer around five hundred queries in less than one second.</p>
+
+<br>
+
+<table cellspacing="1" cellpadding="4" bgcolor="black" border="0">
+  <tbody><tr bgcolor="#e2e2e2">
+    <td>Example Function Calls</td>
+    <td>Example Output</td>
+  </tr>
+  <tr bgcolor="white">
+    <td valign="top">
+<pre>print(count_range(3,10))
+print(count_range(2,19))
+print(count_range(42,297))
+</pre>
+    </td>
+    <td valign="top">
+<pre>5
+11
+159
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<hr size="2">
+<center><b>Introduction to Programming (CC1024)</b><br>
+  DCC/FCUP - University of Porto
+</center>
+<hr size="2">
+
+
+</td>
+</tr>
+</tbody></table>
+</center>
+
+
+</body></html>

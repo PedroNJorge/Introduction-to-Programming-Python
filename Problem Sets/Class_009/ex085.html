@@ -1,0 +1,98 @@
+
+<!-- saved from url=(0076)https://mooshak.dcc.fc.up.pt/~ip/cgi-bin/execute/8614907669189809?view+ip085 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="./base.css" type="text/css">
+</head>
+<body bgcolor="white">
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+  
+    
+    <title>[IP085] Dataset Confusion</title>
+    <style>
+      .function {
+          color: black;
+          background: #ffe2e2;
+          margin: 2px;
+          padding: 2px;
+          border: 1px dashed black;
+      }
+    </style>
+  
+
+
+
+<p><small>In what concerns the continuous evaluation solving exercises grade during the semester, you should </small><b><span style="color:green">submit until 23:59 of December 14th</span></b><br>
+  <small><i>(this exercise will still be available for submission after that deadline, but without counting towards your grade)</i><br>
+    <b>[to understand the context of this problem, you should read the <a target="_blank" href="https://www.dcc.fc.up.pt/~pribeiro/aulas/ip2425/practical/class09.html">class #09 exercise sheet</a>]</b></small></p>
+
+<hr>
+
+<p style="color:red"><b>In this problem you should submit a function as described. Inside the function do not print anything that was not asked!</b></p>
+
+<p style="color:darkblue"><b>(in this class you are expected to write a solution that uses recursion - mooshak will not force it, but that should be your goal)</b></p>
+
+<h2>[IP085] Dataset Confusion</h2>
+
+<p><img src="./8614907669189809" align="right">
+Lord Nibbler has found a peculiar dataset containing a mix of integers nested within lists and tuples. As part of his cosmic experiments, Nibbler needs to calculate the total sum of all the integers within the dataset, regardless of how deeply nested they are. However, being a creature of immense power, Nibbler doesn't want to bother with writing the solution himself. He needs your help!</p>
+  
+<h3>The Problem</h3>
+
+<p>Write a function <span class="function">sum_integers(data)</span> that takes a single input, <i>data</i>, which can be a list or tuple containing integers, strings, doubles, lists, or tuples, with nested structures of arbitrary depth. It should return the sum of all the integers, regardless of how nested they were, and ignore any non-integers values.</p>
+
+<h3>Constraints</h3>
+
+<p>The following limits are guaranteed in all the test cases that will be given to your program:</p>
+
+<table>
+  <tbody><tr>
+    <td>1 ≤ <i>|data|</i>  ≤ 100</td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td>length of data (when flattened)</td>
+  </tr>
+
+</tbody></table>
+
+<br>
+
+<table cellspacing="1" cellpadding="4" bgcolor="black" border="0">
+  <tbody><tr bgcolor="#e2e2e2">
+    <td>Example Function Calls</td>
+    <td>Example Output</td>
+  </tr>
+  <tr bgcolor="white">
+    <td valign="top">
+<pre>print(sum_integers([[(4,3)],(((45,[9]))),[(42)],[1,6,8]]))
+print(sum_integers(["a",([[2]],[["b"]]),40,[[2.2]]]))
+print(sum_integers((1,2,[3],[[4]])))
+print(sum_integers(["hello","world"]))
+</pre>
+    </td>
+    <td valign="top">
+<pre>118
+42
+10
+0
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<hr size="2">
+<center><b>Introduction to Programming (CC1024)</b><br>
+  DCC/FCUP - University of Porto
+</center>
+<hr size="2">
+
+
+</td>
+</tr>
+</tbody></table>
+</center>
+
+
+</body></html>
